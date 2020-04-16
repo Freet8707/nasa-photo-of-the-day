@@ -1,5 +1,18 @@
+.AppWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  border: 1px dashed gray;
+}
+
+.highlight {
+  color: red;
 }
 
 .App-logo {
