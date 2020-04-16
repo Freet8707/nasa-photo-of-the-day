@@ -40,6 +40,16 @@
 .App-link {
   color: #61dafb;
 }
+.contentFlex {
+  display: flex;
+  
+}
+
+.photoDescription {
+  display: flex;
+  flex-direction: column;
+
+}
 
 @keyframes App-logo-spin {
   from {
