@@ -1,9 +1,9 @@
 .imgWrapper {
     display: inline-block;
     height: 500px;
-    padding: 30px 0 0 0;
+    padding: 30px 20px 0 0;
     min-width: 70%;
-    border: 1px dashed gray;
+    /* border: 1px dashed gray; */
 }
 
 .imgFit {

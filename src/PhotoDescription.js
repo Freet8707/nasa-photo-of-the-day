@@ -5,7 +5,7 @@ function PhotoDescription(props){
 
     return (
         <div className="description">
-            <p>{`    ${props.description}`}</p>
+            <p>{"   " + props.description}</p>
         </div>
     )
 }

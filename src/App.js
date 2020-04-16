@@ -30,7 +30,7 @@ function App() {
             app! Have fun <span role="img" aria-label='go!'>🚀</span>!
           </p> */}
           <div className="photoDescription">
-            <AuthorDateDisplay author="Scott Aspinall" date={apodData.date}/>
+            <AuthorDateDisplay author={apodData.copyright} date={apodData.date}/>
             <PhotoDescription description={apodData.explanation}/>
           </div>
         </div>

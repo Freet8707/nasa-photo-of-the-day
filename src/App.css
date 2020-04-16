@@ -8,6 +8,8 @@
   text-align: center;
   width: 100%;
   max-width: 1200px;
+  height: 100vh;
+  background-color: #c9c4ce;
   border: 1px dashed gray;
 }
 
@@ -42,7 +44,7 @@
 }
 .contentFlex {
   display: flex;
-  
+
 }
 
 .photoDescription {
