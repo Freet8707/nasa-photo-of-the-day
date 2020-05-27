@@ -26,8 +26,15 @@ code {
 }
 
 .picture-card {
+  display: flex;
+  flex-direction: column;
   width: 250px;
   height: 300px;
   margin: 0px 25px 0 25px; 
   background: #707070;
+}
+
+.photo-fit {
+  width: 250px;
+  max-height: 100%; 
 }
