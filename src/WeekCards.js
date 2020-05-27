@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WeekCardComp from './WeekCardComp'
+import PotD from './PotD'
 import axios from 'axios'
 
 function WeekCards(){
@@ -47,6 +48,7 @@ function WeekCards(){
             <WeekCardComp photo={photo3} date='May 20, 2020' />
             <WeekCardComp photo={photo4} date='May 21, 2020' />
             <WeekCardComp photo={photo5} date='May 22, 2020' />
+            <PotD />
         </div>
         </div>
     )
