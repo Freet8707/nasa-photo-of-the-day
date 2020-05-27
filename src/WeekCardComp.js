@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-function Card(props){
+function WeekCardComp(props){
+    console.log('inside card component')
     return(
-        <div>
-            <h3>Date Here</h3>
-            <img></img>
+        
+        <div className='picture-card'>
         </div>
     )
 }
 
-export default Card
+export default WeekCardComp
