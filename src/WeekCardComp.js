@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
 function WeekCardComp(props){
-    console.log(props.photo)
-    return (
-        <>{props.photo.map(url => {
-            return (
-                <div className='picture-card' >
-                    {/* <img className='photo-fit' src={url} alt='nasa photo' /> */}
-                </div>
-            )
-        })}</>
+    const photo = props.photo
+    const date = props.date
+    console.log(photo)
+    return(
+        
+        <div className='picture-card'>
+            <h3>{date}</h3>
+            <img className='photo-fit' src={photo} alt='nasa photo' />
+        </div>
     )
 }
 

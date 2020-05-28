@@ -1,22 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import Card from './WeekCardComp'
+import WeekCardComp from './WeekCardComp'
 import PotD from './PotD'
 import axios from 'axios'
 
 function WeekCards(){
-    const dateRange = ['2020-05-18', '2020-05-19', '2020-05-20', '2020-05-21', '2020-05-22']
-    const [photo, setPhoto] = useState([])
+    // const dateRange = ['2020-05-18', '2020-05-19', '2020-05-20', '2020-05-21', '2020-05-22']
+    const [photo1, setPhoto1] = useState('')
+    const [photo2, setPhoto2] = useState('')
+    const [photo3, setPhoto3] = useState('')
+    const [photo4, setPhoto4] = useState('')
+    const [photo5, setPhoto5] = useState('')
 
     useEffect(() => {
-        dateRange.map((element) => {
-            axios.get(`https://api.nasa.gov/planetary/apod?date=${element}&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
-            .then(response => {
-                // console.log(response)
-                photo.push(response.data.url)
-            })
-            .catch(error => console.log('error', error))
-        })
-        console.log(photo)
+        axios.get(`https://api.nasa.gov/planetary/apod?date=2020-05-22&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
+        .then(response => setPhoto1(response.data.url))
+        .catch(error => console.log('error', error))
+    }, [])
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?date=2020-05-23&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
+        .then(response => setPhoto2(response.data.url))
+        .catch(error => console.log('error', error))
+    }, [])
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?date=2020-05-24&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
+        .then(response => setPhoto3(response.data.url))
+        .catch(error => console.log('error', error))
+    }, [])
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?date=2020-05-25&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
+        .then(response => setPhoto4(response.data.url))
+        .catch(error => console.log('error', error))
+    }, [])
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?date=2020-05-26&api_key=xpfLwc9FBMcUvKuj84a1BlSh89ALxN4mCCdfMCyY`)
+        .then(response => setPhoto5(response.data.url))
+        .catch(error => console.log('error', error))
     }, [])
 
     return(
@@ -25,13 +43,11 @@ function WeekCards(){
             <h1>Last Week's Photos!</h1>
         </div>
         <div className='cards-container'>
-            {console.log(photo)}
-            <Card photo={photo} />
-            {/* <WeekCardComp photo={photo1} date='May 18, 2020' />
-            <WeekCardComp photo={photo2} date='May 19, 2020' />
-            <WeekCardComp photo={photo3} date='May 20, 2020' />
-            <WeekCardComp photo={photo4} date='May 21, 2020' />
-            <WeekCardComp photo={photo5} date='May 22, 2020' /> */}
+            <WeekCardComp photo={photo1} date='May 22, 2020' />
+            <WeekCardComp photo={photo2} date='May 23, 2020' />
+            <WeekCardComp photo={photo3} date='May 24, 2020' />
+            <WeekCardComp photo={photo4} date='May 25, 2020' />
+            <WeekCardComp photo={photo5} date='May 26, 2020' />
             <PotD />
         </div>
         </div>
