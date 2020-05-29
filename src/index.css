@@ -17,6 +17,11 @@ code {
     monospace;
 }
 
+.weekHeader {
+  margin: 0;
+  padding-top: 30px;
+}
+
 .cards-container {
   display: flex;
   flex-direction: row;
@@ -35,7 +40,7 @@ code {
   width: 250px;
   height: 300px;
   margin: 40px 25px 0 25px; 
-  background: rgba(33, 7, 61, .45);
+  background: rgba(33, 7, 61, .65);
 }
 
 .photo-fit {
@@ -46,7 +51,6 @@ code {
 .photoOfTheDay {
   display: flex;
   flex-direction: column;
-  width: 100%;  
 }
 
 .potdFit {
